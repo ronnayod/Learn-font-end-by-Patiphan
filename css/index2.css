@@ -1,0 +1,310 @@
+/* Front
+@font-face {
+       font-family: Kanit;
+       src: url(../fonts/Kanit-Regular.woff);
+}
+
+body {
+      font-family: Kanit;
+}
+*/
+
+/* background รูปภาพ
+แบบที่1
+div {
+      width: 300px ;
+      height: 300px;
+      background-image: url(../img/tree.jfif);
+      background-repeat: no-repeat;
+      background-color: brown;
+      background-size: cover;
+      background-position: 50% 50%;  
+      
+}
+แบบที่2
+div {
+      width: 300px ;
+      height: 300px;
+  background: url(../img/tree.jfif) no-repeat ;
+}
+*/ 
+
+/* CSS Borders
+แบบที่1
+div {
+      width: 300px;
+      height: 300px;
+      border: 2px dotted purple ;
+}
+แบบที่2
+div{
+      width: 300px;
+      height: 300px;
+      border-width: 10px;
+      border-style: dashed;
+      border-color: pink;
+}
+*/
+
+/* Box Model , margin , padding
+
+div {
+      width: 100px;
+      height: 100px;
+      background: black;
+      border: 3px solid green;
+      color: aliceblue;
+      padding: 10px;
+
+      margin-top: ;
+      margin-left: ;
+      margin-bottom: ;
+      margin-right: ;
+      margin: 0 0 0 0;
+      margin: 10px 20px 10px ;
+      margin: 10px 20px ;
+      margin: 0 auto ;
+
+      padding-left: ;
+      padding-top: ;
+      padding-bottom: ;
+      padding-right: ;
+      padding:  0 0 0 0;
+      padding: 10px 20px 10px ;
+      padding: 10px 20px ;
+      padding: 0 auto ;
+}
+*/
+
+/* Displays
+div{
+      background: red;
+      display: inline;
+}
+
+.visibility{
+      visibility:hidden;
+}
+
+.hidden{
+      display: none;
+}
+
+span{
+      background: green;
+      display: block;
+}
+*/
+
+/* Width & Max-Width
+.ex1{
+      width: 500px;
+      border: 2px solid green;
+}
+
+.ex2{
+      max-width: 500px;
+      border: 2px solid red;
+}
+*/
+
+/*
+      CSS - Position
+      - Static
+      - relative
+      - fixed อยู่ที่เดิม ไม่ว่าจะเลื่อนเมาสืไปไหน
+      - absolute
+      - sticky จะทำงานเหมือนกับfixedแต่จะstickyตามลงมา
+
+      Static,relative,fixed,sticky
+div{ 
+      width: 300px;
+      height: 20px;
+      border: 2px solid green;
+      position: fixed;
+
+}
+      absolute
+.parrent{
+      width: 300px;
+      height: 150px;
+      border: 2px solid green;
+      position: relative;
+      top: 50px;
+      left: 50px;
+}
+.child{
+      width: 100px;
+      height: 50px;
+      border: 2px solid red;
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      background: black;
+      color: #ffffff;
+}
+
+*/
+
+/*วิธีการแก้ไข z in dex
+.box1{
+      width: 100px;
+      height: 100px;
+      background: red;
+      border: 2px solid black;
+      position: relative;
+      top: 50px;
+      z-index: 2;
+}
+.box2{
+      width: 100px;
+      height: 100px;
+      background: green;
+      border: 2px solid black;
+      z-index: 1;
+}
+.box3{
+      width: 100px;
+      height: 100px;
+      background: purple;
+      border: 2px solid black;
+      position: relative;
+      top: -40px;
+      z-index: -1;
+}
+*/
+
+/* Overflow
+div{
+      width: 300px;
+      height: 150px;
+      border: 2px solid black;
+      overflow: auto;
+}
+*/
+
+/* การเรียกใช้ Float ในการแก้bug
+
+header{
+      height: 60px;
+      background: rgb(185, 179, 179) ;
+}
+section{
+      width: 40%;
+      float: left;
+      height: 300px;
+      background:#ddd;
+}
+aside{
+      width: 40%;
+      float: right;
+      height: 300px;
+      background: #ccc;
+}
+
+.clear::after{
+      content: "";
+      clear: both;
+      display: table;
+}
+
+footer{
+      height: 60px;
+      background: green;
+}
+
+รูปภาพ
+
+div{
+      border: 2px solid black;
+      overflow: auto;
+}
+img{
+      float:right;
+}
+
+*/
+
+/*
+      CSS - Combinators
+
+      - Descendant Selector (space)
+      - Chid Selector (>)
+      - Adjacent Sibling Selector (+)
+      - General Subling Selector (~)
+
+      div ~ p {
+      background: yellow;
+}
+*/
+
+/* 
+      : Pseudo Classes 
+      :: Pseudo Element
+
+: Pseudo Classes      
+div{
+      width: 100px;
+      height: 100px;
+      background: black;
+}
+div:hover {
+      background: red;
+}
+
+:: Pseudo Element
+p::first-line{
+      font-size: 36px;
+}
+
+การทำงาน Pseudo Classes  กับ Pseudo Element ร่วมกัน
+p:first-child::first-line {
+      font-size: 36px;
+}
+
+การใช้งาน before กับ after
+
+p::before{
+      content: "This is inserted from :: before =>";
+}
+
+p::after{
+      content: "<= This is inserted from :: after";
+}
+*/
+
+/* Box-sizing 
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+div {
+      width: 150px;
+      height: 150px;
+      border: 2px solid black;
+      padding: 20px;
+      box-sizing: border-box;
+}
+*/
+
+/*
+
+      CSS Specificity
+
+      - Inline style - <header style="color:000;"></header>
+      - IDs - #content
+      - Classes, attributes and pseudo-classes - :hover, :focus etc.
+      - Elements and pseudo-elements - such as h1, div, :before and :after.
+
+      #heading {
+            color: red;
+      }
+
+      .heading {
+            color: green;
+      }
+      h1 {
+            color: purple;
+      }
+*/
